@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../Componente/Header";
 import logo from "../Pages/logo.png";
 import styled from "styled-components";
 
@@ -15,17 +16,24 @@ const BoxOne = styled.div`
     height: 100vh;
 
     @media(max-width:500px){
-        width: 100%;
-        height: 55vh;   
+        width: 50%;
+        height: 100vh; 
     }
     @media(max-width:320px){
-        height: 50vh;
+        height: 150vh;
     }
 `
 const FigureOne = styled.figure`
     position: absolute;
     left: 8%;
     top: 25vh;
+
+    @media(max-width: 935px){
+        img{
+            width: 38vh;
+            height: 8vh;
+        }
+    }
 
     @media(max-width:500px){
         img{
@@ -44,11 +52,12 @@ const FigureTwo = styled.figure`
 
     @media(max-width:500px){
         {
-            width: 35vh;
-            height: 35vh;
+            z-index: 1;
+            width: 40vh;
+            height: 40vh;
             position: absolute;
-            top: 12%;
-            left: 25%;
+            top: 16%;
+            left: 24%;
         }
     }
     @media(max-width:400px){
@@ -58,8 +67,10 @@ const FigureTwo = styled.figure`
     }
     @media(max-width:320px){
         position: absolute;
-        top: 9%;
-        left: 8%;
+        width: 38vh;
+        height: 38vh;
+        top: 15%;
+        left: 11%;
     }
 `
 const BoxTwo = styled.div`
@@ -78,27 +89,35 @@ const BoxTwo = styled.div`
         position: absolute;
         top: 10vh;
         left: 30%;
+        z-index: 8;
     }
 
+    @media(max-width: 1024px){
+        h1{
+            top: 15vh;
+            left: 13vh;
+        }
+    }
     @media(max-width:500px){
         position: absolute;
-        width: 110%;
-        height: 40vh;
-        top: 155vh;
-        left: -40vh;
-        z-index: 10;
+        width: 50%;
+        height: 100vh;
+        top: 100vh;
+        left: 0vh;
+        z-index: -1;
         h1{
-            top: -25vh;
-            left: 14vh;
+            font-size: 5vh;
+            top: 35vh;
+            left: 5vh;
         }
     }
     @media(max-width:320px){
-        width: 120%;
-        height: 40vh;
-        top: 150vh;
+        width: 58%;
+        height: 150vh;
+        top: 100vh;
         h1{
-            font-size: 5vh;
-            margin-left: 9vh;
+            font-size: 6vh;
+            margin-left: -3vh;
         }
     }
 `
@@ -106,6 +125,7 @@ const BoxTwo = styled.div`
 export default function Home(){
     return(
         <Container>
+            <Header />
             <BoxOne>
                 <FigureOne>
                     <img src={logo}/>

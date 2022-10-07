@@ -1,14 +1,12 @@
 import React from 'react'
 import { GlobalStyle } from "../src/Global/Styled";
-import Header from "../src/Componente/Header";
-import Home from '../src/Pages/Home';
+import { Rotas } from "../src/Service/Routes";
 
 export default function App(){
   return(
     <section>
     <GlobalStyle />
-    <Header />
-    <Home />
+    <Rotas />
     </section>
   )
 }

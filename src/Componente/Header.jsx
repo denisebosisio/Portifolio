@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 
@@ -10,33 +11,30 @@ const Nav = styled.nav`
     height: 7vh;
     position: fixed;
     z-index: 10;
-`
-const LinkBox = styled.ul` 
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 12vh;
-    margin-top: 2vh;
-`;
-const Link = styled.li`
-    color: #E5C09D;
-    font-weight: bold;
-    list-style: none;
-    margin-left: 5vh;
-    z-index: 2;
-    @media screen and (max-width: 500px){
+
+    @media(max-width: 500px){
+        z-index: 30;
 
     }
+`
+const LinkBox = styled.ul` 
+    color: #E5C09D;
+    font-weight: bold;
+    float: right;
+    margin-right: 10vh;
+    margin-top: 2vh;
+    
 `;
-
 
 export default function Header(){
     return(
         <Nav>
             <LinkBox>
-                <Link to="">SOBRE</Link>
-                <Link to="">PORTIFÓLIO</Link>
-                <Link to="">ONU</Link>
-                <Link to="">CONTATO</Link>
+                <Link to="/">HOME</Link>
+                <Link to="/about">SOBRE</Link>
+                <Link to="/portifolio">PORTIFÓLIO</Link>
+                <Link to="/ods">ODS</Link>
+                <Link to="/contato">CONTATO</Link>
             </LinkBox>
         </Nav>
     )
