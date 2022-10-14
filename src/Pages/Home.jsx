@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../Componente/Header";
-import logo from "../Pages/logo.png";
+import logo from "../Imagens/logo.png";
 import styled from "styled-components";
 
 const Container = styled.section`
@@ -26,7 +26,7 @@ const BoxOne = styled.div`
 const FigureOne = styled.figure`
     position: absolute;
     left: 8%;
-    top: 25vh;
+    top: 20vh;
 
     @media(max-width: 935px){
         img{
@@ -87,7 +87,7 @@ const BoxTwo = styled.div`
         font-weight: bold;
         font-size: 8vh;
         position: absolute;
-        top: 10vh;
+        top: 9vh;
         left: 30%;
         z-index: 8;
     }
@@ -136,6 +136,9 @@ export default function Home(){
             </BoxOne>
             <BoxTwo>
                 <h1>Bem-vindo</h1>
+                <figure>
+                    
+                </figure>
             </BoxTwo>
         </Container>
     )

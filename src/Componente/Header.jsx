@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 
 const Nav = styled.nav`
-    background: #222222;
     @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
     width: 50%;
     height: 8vh;
@@ -28,8 +27,8 @@ const Ul = styled.ul`
 `;
 const StyledLink = styled(Link)`
     font-family: 'Montserrat', sans-serif;
-    color: #E5C09D;
-    font-size: ;
+    color: #222222;
+    font-weight: bold;
     &:visited,
     &:active,
     &:link{
