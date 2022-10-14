@@ -6,10 +6,10 @@ import styled from 'styled-components';
 const Nav = styled.nav`
     background: #222222;
     @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    height: 7vh;
-    position: fixed;
+    width: 50%;
+    height: 8vh;
+    position: absolute;
+    left: 50%;
     z-index: 10;
 
     @media(max-width: 500px){
@@ -17,25 +17,35 @@ const Nav = styled.nav`
 
     }
 `
-const LinkBox = styled.ul` 
-    color: #E5C09D;
-    font-weight: bold;
+const Ul = styled.ul` 
+    width: 65%;
     float: right;
+    display: flex;
+    justify-content: space-evenly;
     margin-right: 10vh;
     margin-top: 2vh;
     
 `;
+const StyledLink = styled(Link)`
+    font-family: 'Montserrat', sans-serif;
+    color: #E5C09D;
+    font-size: ;
+    &:visited,
+    &:active,
+    &:link{
+        text-decoration: none;
+    }
+`
 
 export default function Header(){
     return(
         <Nav>
-            <LinkBox>
-                <Link to="/">HOME</Link>
-                <Link to="/about">SOBRE</Link>
-                <Link to="/portifolio">PORTIFÓLIO</Link>
-                <Link to="/ods">ODS</Link>
-                <Link to="/contato">CONTATO</Link>
-            </LinkBox>
+            <Ul>
+                <StyledLink to="/">HOME</StyledLink>
+                <StyledLink to="/about">SOBRE</StyledLink>
+                <StyledLink to="/portifolio">PORTIFÓLIO</StyledLink>
+                <StyledLink to="/ods">ODS</StyledLink>
+            </Ul>
         </Nav>
     )
 }
