@@ -11,6 +11,18 @@ const Container = styled.section`
     width: 100%;
     height: 115vh;
     background: #E5C09D;
+
+    @media(max-width: 970px){
+        width: 100%;
+        height: 150vh;
+    }
+    @media(max-width: 850px){
+        width: 100%;
+        height: 170vh;
+    }
+    @media(max-width: 600px){
+        height: 200vh;
+    }
 `
 const BoxOne = styled.div`
     position: absolute;
@@ -23,6 +35,14 @@ const BoxOne = styled.div`
     h3{
         font-size: 4vh;
         line-height: 6vh;
+    }
+
+    @media(max-width: 1024px){
+        top: 10vh;
+    }
+    @media(max-width: 970px){
+        top: 12vh;
+        left: 12%;
     }
 `
 const BoxTwo = styled.div`
@@ -49,6 +69,47 @@ const BoxTwo = styled.div`
         top: 50vh;
         left: -60%;
     }
+
+    @media(max-width: 1024px){
+        top: 15vh;
+        left: 55%;
+    }
+    @media(max-width: 970px){
+        top: 38vh;
+        left: 55%;
+        h3{
+            width: 50vh;
+            top: 10vh;
+            left: -60vh;
+        }
+        h4{
+            width: 50vh;
+            top: 22vh;
+            left: -60vh;
+        }
+    }
+    @media(max-width: 750px){
+        h3{
+            left: -48vh;
+        }
+        h4{
+            top: 25vh;
+            left: -48vh;
+        }
+    }
+    @media(max-width: 600px){
+        top: 45vh;
+        left: 25%;
+        h3{
+            top: 43vh;
+            left: -25%;
+            width: 67vh;
+        }
+        h4{
+            top: 48vh;
+            left: 0vh;
+        }
+    }
 `
 const BoxThree = styled.div`
     position: absolute;
@@ -68,25 +129,94 @@ const BoxThree = styled.div`
         display: flex;
         justify-content: center;
     }
+
+    @media(max-width: 1024px){
+        top: 42vh;
+    }
+    @media(max-width: 970px){
+        top: 85vh;
+        left: 35%;
+    }
+    @media(max-width: 600px){
+        top: 108vh;
+        left: 28vh;
+        font-size: 2.5vh;
+        ul{
+            width: 90vh;
+            top: 4vh;
+            left: -28vh;
+        }
+        li{
+            display: flex;
+            justify-content: center;
+            font-size: 2.5vh;
+        }
+    }
 `
 const BoxFour = styled.div`
     position: absolute;
-    top: 78vh;
-    left: 14%;
+    width: 22vh;
+    top: 82vh;
+    left: 10%;
+    ul{
+        position: absolute;
+        width: 55vh;
+        margin-top: -13vh;
+        left: 25vh;
+        line-height: 4vh;
+        list-style: none; 
+    }
+    li{
+        font-size: 3vh;
+    }
 
-ul{
-    position: absolute;
-    width: 100vh;
-    margin-top: 2vh;
-    left: -30vh;
-    line-height: 4vh;
-    list-style: none; 
-}
-li{
-    font-size: 3vh;
-    display: flex;
-    justify-content: center;
-}
+    @media(max-width: 1024px){
+        top: 83vh;
+        left: 5%;
+    }
+    @media(max-width: 970px){
+        top: 118vh;
+        left: 6%;
+        ul{
+            width: 45vh;
+            left: 22vh;
+        }
+    }
+    @media(max-width: 850px){
+        left: 12%;
+        h2{
+            width: 40vh;
+        }
+        ul{
+            width: 60vh;
+            top: 9vh;
+            left: 40vh;
+        }
+    }
+    @media(max-width: 750px){
+        top: 116vh;
+        left: 15%;
+        h2{
+            width: 20vh;
+        }
+        ul{
+            top: 11vh;
+            left: 22vh;
+        }
+    }
+    @media(max-width: 600px){
+        top: 138vh;
+        font-size: 2.5vh;
+        h2{
+            font-size: 2.5vh;
+        }
+
+        li{
+            display: flex;
+            justify-content: center;
+            font-size: 2.5vh;
+        }
+    }
 `
 const BoxFive = styled.div`
 position: absolute;
@@ -100,18 +230,38 @@ position: absolute;
         left: -18vh;
     }
 
-ul{
-    position: absolute;
-    width: 50vh;
-    margin-top: 2vh;
-    top: -10vh;
-    left: 5vh;
-    line-height: 4vh;
-    list-style: none; 
-}
-li{
-    font-size: 3vh;
-}
+    ul{
+        position: absolute;
+        width: 50vh;
+        margin-top: 2vh;
+        top: -10vh;
+        left: 5vh;
+        line-height: 4vh;
+        list-style: none; 
+    }
+    li{
+        font-size: 3vh;
+    }
+
+    @media(max-width: 1024px){
+        top: 87vh;
+    }
+    @media(max-width: 970px){
+        top: 123vh;
+        ul{
+            left: 2vh;
+        }
+    }
+    @media(max-width: 850px){
+        top: 145vh;
+        left: 38%;
+        ul{
+            left: 5vh;
+        }
+    }
+    @media(max-width: 600px){
+        top: 170vh;
+    }
 `
 
 export default function Sobre(){
@@ -145,7 +295,7 @@ export default function Sobre(){
                 <h2>Trabalho Voluntário</h2>
                 <ul>
                     <li>Empresa Júnior de Estatística</li>
-                    <li>Gerente de Gestão de Pessoas</li>
+                    <li>Gerente de Gestão de Pessoas.</li>
                     <li>Projetos envolvendo analise de dados.</li>
                 </ul>
             </BoxFour>
@@ -158,7 +308,6 @@ export default function Sobre(){
                     <li>Inteligência Emocional</li>
                 </ul>
             </BoxFive>
-            <Footer />
         </Container>
     )
 }
