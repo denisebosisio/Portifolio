@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import Menu from '../Componente/Menu/Menu';
 import styled from 'styled-components';
 
 
@@ -39,10 +40,11 @@ const StyledLink = styled(Link)`
 export default function Header(){
     return(
         <Nav>
+            <Menu />
             <Ul>
                 <StyledLink to="/">HOME</StyledLink>
                 <StyledLink to="/about">SOBRE</StyledLink>
-                <StyledLink to="/portifolio">PORTIFÓLIO</StyledLink>
+                <StyledLink to="/portifolio">PORTFÓLIO</StyledLink>
                 <StyledLink to="/ods">ODS</StyledLink>
             </Ul>
         </Nav>
