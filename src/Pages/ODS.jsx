@@ -19,16 +19,25 @@ const BoxOne = styled.div`
     font-weight: bold;
     position: relative;
     top: 15vh;
+    line-height: 6vh;
 
     h1{
         display: flex;
         justify-content: center;
-        font-size: 5vh;
+        font-size: 4.2vh;
+    }
+    h3{
+        display: flex;
+        justify-content: center;
+    }
+    p{
+        display: flex;
+        justify-content: center;
     }
 `
 const BoxTwo = styled.main`
     position: absolute;
-    top: 20vh;
+    top: 25vh;
     width: 100%;
     height: 50vh;
     display: flex;
@@ -46,8 +55,10 @@ export default function ODS() {
       <Container>
         <Header />
         <BoxOne>
-            <h1>OBJETIVOS DE DESENVOLVIMENTO SUSTENTÁVEL</h1>
-            <h3></h3>
+            <h1>OBJETIVOS DE DESENVOLVIMENTO SUSTENTÁVEL EM INDIANA</h1>
+            <h3>Considerada, pela população, como a Rainha das Artes de Argila.</h3>
+            <p>Indiana fica localizada no oeste do estado de São Paulo e conta com 4 879 habitantes.</p>
+            <p>Aqui estão apresentadas ideias práticas sobre como atingir as ODS abaixo no município.</p>
         </BoxOne>
         <BoxTwo>
             <Card>

@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../Componente/Header";
 import logo from "../Imagens/logo.png";
+import Denise from "../Imagens/Denise.jpeg";
 import styled from "styled-components";
 
 const Container = styled.section`
@@ -44,20 +45,32 @@ const FigureOne = styled.figure`
 const FigureTwo = styled.figure`
     background: pink;
     position: absolute;
-    width: 40vh;
-    height: 40vh;
-    left: 15%;
-    top: 45vh;
+    width: 48vh;
+    height: 48vh;
+    left: 13%;
+    top: 40vh;
     border-radius: 50%;
+
+    img{
+        width: 46vh;
+        transform: rotate(305deg);
+        border-radius: 50%;
+        position: absolute;
+        top: 2.5%;
+        left: 2%;
+    }
 
     @media(max-width:500px){
         {
             z-index: 1;
-            width: 40vh;
-            height: 40vh;
+            width: 42vh;
+            height: 42vh;
             position: absolute;
             top: 16%;
             left: 24%;
+        }
+        img{
+            width: 40vh;
         }
     }
     @media(max-width:400px){
@@ -71,6 +84,9 @@ const FigureTwo = styled.figure`
         height: 38vh;
         top: 15%;
         left: 11%;
+        img{
+            width: 36vh;
+        }
     }
 `
 const BoxTwo = styled.div`
@@ -131,7 +147,7 @@ export default function Home(){
                     <img src={logo}/>
                 </FigureOne>
                 <FigureTwo>
-                    <img src=""/>
+                    <img src={Denise}/>
                 </FigureTwo>
             </BoxOne>
             <BoxTwo>

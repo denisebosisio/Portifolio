@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Componente/Header';
 import Footer from '../Componente/Footer';
+import Denise2 from "../Imagens/Denise2.jpeg";
 import styled from 'styled-components';
 
 const Container = styled.section`
@@ -44,6 +45,16 @@ const BoxOne = styled.div`
         top: 12vh;
         left: 12%;
     }
+    @media(max-width: 320px){
+        left: 2vh;
+        h1{
+            font-size: 5vh;
+        }
+        h3{
+            font-size: 3vh;
+            line-height: 5vh;
+        }
+    }
 `
 const BoxTwo = styled.div`
     position: absolute;
@@ -55,6 +66,13 @@ const BoxTwo = styled.div`
         width: 40vh;
         height: 40vh;
         border-radius: 50%;
+    }
+    img{
+        position: absolute;
+        width: 38vh;
+        border-radius: 50%;
+        top: 1vh;
+        left: 1vh;
     }
 
     h3{
@@ -110,6 +128,19 @@ const BoxTwo = styled.div`
             left: 0vh;
         }
     }
+    @media(max-width: 320px){
+        top: 38vh;
+        left: 5vh;
+        h3{
+            width: 40vh;
+            left: 0vh;
+        }
+        h4{
+            width: 40vh;
+            margin-top: 3vh;
+            left: 0vh;
+        }
+    }
 `
 const BoxThree = styled.div`
     position: absolute;
@@ -150,6 +181,27 @@ const BoxThree = styled.div`
             display: flex;
             justify-content: center;
             font-size: 2.5vh;
+        }
+    }
+    @media (max-width: 515px){
+        left: 25%;
+        ul{
+            width: 65vh;
+            left: -15vh;
+        }
+        li{
+            font-size: 2.3vh;
+        }
+    }
+    @media(max-width: 320px){
+        top: 102vh;
+        left: 5vh;
+        h2{
+            font-size: 3vh;
+        }
+        ul{
+            width: 38vh;
+            left: 0vh;
         }
     }
 `
@@ -205,16 +257,37 @@ const BoxFour = styled.div`
         }
     }
     @media(max-width: 600px){
-        top: 138vh;
-        font-size: 2.5vh;
+        top: 135vh;
+        left: 26%;
         h2{
-            font-size: 2.5vh;
+            width: 40vh;
         }
-
+        ul{
+            top: 20vh;
+            left: -7.2vh;
+        }
         li{
+            width: 50vh;
             display: flex;
             justify-content: center;
             font-size: 2.5vh;
+        }
+    }
+    @media(max-width: 320px){
+        top: 132vh;
+        left: 5vh;
+        h2{
+            font-size: 3vh;
+        }
+        ul{
+            top: 18vh;
+            left: 0vh;
+        }
+        li{
+            width: 40vh;
+            display: flex;
+            justify-content: flex-start;
+            font-size: 2.3vh;
         }
     }
 `
@@ -260,7 +333,36 @@ position: absolute;
         }
     }
     @media(max-width: 600px){
-        top: 170vh;
+        top: 166vh;
+        left: 55%;
+        ul{
+            width: 40vh;
+            top: 2vh;
+            left: -28vh;
+        }
+        li{
+            display: flex;
+            justify-content: center;
+            font-size: 2.5vh;
+        }
+    }
+    @media(max-width: 320px){
+        top: 160vh;
+        left: 0vh;
+        h2{
+            left: 5vh;
+            font-size: 3vh;
+        }
+        ul{
+            left: 5vh;
+            top: 0vh;
+        }
+        li{
+            font-size: 2.3vh;
+            width: 40vh;
+            display: flex;
+            justify-content: flex-start;
+        }
     }
 `
 
@@ -275,7 +377,7 @@ export default function Sobre(){
             </BoxOne>
             <BoxTwo>
                 <figure>
-                    <img src=''/>
+                    <img src={Denise2}/>
                 </figure>
                 <h3>Estudante da Universidade Estadual Paulista.</h3>
                 <h4>

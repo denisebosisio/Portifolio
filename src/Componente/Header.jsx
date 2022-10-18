@@ -40,7 +40,6 @@ const StyledLink = styled(Link)`
 export default function Header(){
     return(
         <Nav>
-            <Menu />
             <Ul>
                 <StyledLink to="/">HOME</StyledLink>
                 <StyledLink to="/about">SOBRE</StyledLink>
