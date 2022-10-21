@@ -1,7 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../Componente/Header";
 import logo from "../Imagens/logo.png";
 import Denise from "../Imagens/Denise.jpeg";
+import email from "../Imagens/email.jpeg";
+import linkedin from "../Imagens/linkedin.jpeg";
+import github from "../Imagens/github.jpg";
 import styled from "styled-components";
 
 const Container = styled.section`
@@ -10,15 +14,22 @@ const Container = styled.section`
     width: 100%;
     height: 100vh;
     position: relative;
+
+    @media(max-width: 768px){
+        height: 120vh;
+    }
 `
 const BoxOne = styled.div`
     background: #222222;
     width: 50%;
     height: 100vh;
 
+    @media(max-width: 768px){
+        height: 120vh;
+    }
     @media(max-width:500px){
         width: 50%;
-        height: 100vh; 
+        height: 150vh; 
     }
     @media(max-width:320px){
         height: 150vh;
@@ -107,17 +118,23 @@ const BoxTwo = styled.div`
         left: 30%;
         z-index: 8;
     }
-
     @media(max-width: 1024px){
         h1{
             top: 15vh;
             left: 13vh;
         }
     }
+
+    @media(max-width: 768px){
+        position: absolute;
+        top: 100vh;
+        height: 120vh;
+    }
+
     @media(max-width:500px){
         position: absolute;
         width: 50%;
-        height: 100vh;
+        height: 150vh;
         top: 100vh;
         left: 0vh;
         z-index: -1;
@@ -137,6 +154,69 @@ const BoxTwo = styled.div`
         }
     }
 `
+const Email = styled.div`
+    margin-top: 70vh;
+    margin-left: 12vh;
+    img{
+        width: 5vh;
+    }
+    p{
+        position: absolute;
+        top: 71vh;
+        left: 20vh;
+    }
+    @media(max-width: 768px){
+        margin-top: 90vh;
+        margin-left: 3vh;
+        p{
+            position: absolute;
+            top: 91vh;
+            left: 9vh;
+        }
+    }
+`
+const Linkedin =styled.div`
+    margin-top: 1vh;
+    margin-left: 12vh;
+    img{
+        width: 5vh;
+    }
+    p{
+        position: absolute;
+        top: 77.5vh;
+        left: 20vh;
+    }
+    @media(max-width: 768px){
+        margin-top: 1vh;
+        margin-left: 3vh;
+        p{
+            position: absolute;
+            top: 98vh;
+            left: 9vh;
+        }
+    }
+`
+const Git = styled.div`
+    margin-top: 1vh;
+    margin-left: 12vh;
+    img{
+        width: 5vh;
+    }
+    p{
+        position: absolute;
+        top: 84vh;
+        left: 20vh;
+    }
+    @media(max-width: 768px){
+        margin-top: 1vh;
+        margin-left: 3vh;
+        p{
+            position: absolute;
+            top: 104vh;
+            left: 9vh;
+        }
+    }
+`
 
 export default function Home(){
     return(
@@ -152,9 +232,18 @@ export default function Home(){
             </BoxOne>
             <BoxTwo>
                 <h1>Bem-vindo</h1>
-                <figure>
-                    
-                </figure>
+                <Email>
+                    <img src={email}/>
+                    <p>denisebosisio12@gmail.com</p>
+                </Email>
+                <Linkedin>
+                    <img src={linkedin}/>
+                    <p>linkedin.com/in/denisebosisio</p>
+                </Linkedin>
+                <Git>
+                    <img src={github}/>
+                    <p>github.com/denisebosisio</p>
+                </Git>
             </BoxTwo>
         </Container>
     )
